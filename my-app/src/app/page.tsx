@@ -1,5 +1,9 @@
-import Image from "next/image";
+import PokemonList from './components/PokemonList';
 
-export default function Home() {
-  return <h1>가보자고</h1>;
+export default function HomePage() {
+  return (
+    <div className="container mx-auto p-4">
+      <PokemonList />
+    </div>
+  );
 }
