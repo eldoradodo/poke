@@ -38,7 +38,7 @@ const PokemonList = () => {
     <div className="grid grid-cols-2 gap-4">
       {pokemons.map(pokemon => (  //각 포켓몬 객체에 대해 jsx 반환
         <div key={pokemon.id} className="p-4 border rounded-lg">
-          <Link href={`/pokemon/${pokemon.id}`}>  
+          <Link href={`/pokemons/${pokemon.id}`}>  
             <div> 
               <Image
                 src={pokemon.sprites.front_default}
