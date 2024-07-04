@@ -35,18 +35,18 @@ const PokemonList = () => {
   }
 
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-5 gap-4 it">
       {pokemons.map(pokemon => (  //각 포켓몬 객체에 대해 jsx 반환
-        <div key={pokemon.id} className="p-4 border rounded-lg">
+        <div key={pokemon.id} className="p-4 border border-lime-600 rounded-lg flex flex-col items-center">
           <Link href={`/pokemons/${pokemon.id}`}>  
-            <div> 
+            <div className="text-center"> 
               <Image
                 src={pokemon.sprites.front_default}
                 alt={pokemon.korean_name}
                 width={96}
                 height={96}
               />
-              <h2>{pokemon.korean_name} </h2>
+              <h2 className="mt-2">{pokemon.korean_name} </h2>
               <h2>도감 번호 : {pokemon.id}</h2>
             </div>
           </Link>

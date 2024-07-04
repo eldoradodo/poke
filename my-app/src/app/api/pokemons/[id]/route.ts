@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import axios from 'axios';
 
 export const GET = async (
-  request: Request,
+  request: Request, 
   { params }: { params: { id: string } },
 ) => {
   const { id } = params;

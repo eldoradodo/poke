@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body>
-      <header className="bg-lime-600 text-white p-4">
+      <header className="bg-lime-600 text-white p-4 text-center">
         <h1 className="text-2xl font-bold">포켓몬 도감</h1>
       </header>
       <main className="container mx-auto p-4">
