@@ -4,7 +4,7 @@ import axios from "axios";
 const TOTAL_POKEMON = 151;
 
 export const GET = async (request: Request) => {
-
+  
   try {
     const allPokemonPromises = Array.from({ length: TOTAL_POKEMON }, (_, index) => {
       const id = index + 1;
@@ -18,7 +18,7 @@ export const GET = async (request: Request) => {
 
     const allPokemonData = allPokemonResponses.map(([response, speciesResponse], index) => {
       const koreanName = speciesResponse.data.names.find(
-          (name: any) => name.language.name === "ko"
+        (name: any) => name.language.name === "ko"
       );
       return { ...response.data, korean_name: koreanName?.name || null };
     });
